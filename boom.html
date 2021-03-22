@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>대량 메일 발송</title>
+  <link rel="stylesheet" href="./css/boom.css">
+</head>
+
+<body>
+  <header class="Header">
+    <ul>
+      <li>
+        <div id="cnt">0 / 0</div>
+      </li>
+      <li>
+        <div id="msg">stats</div>
+      </li>
+    </ul>
+  </header>
+  <aside class="aside">
+    <table>
+      <tr>
+        <td class="title_color">from</td>
+        <td><input type="text" class="input" id="hFrom" placeholder="email@email.com" required size="30" /></td>
+      </tr>
+      <tr>
+        <td class="title_color">name</td>
+        <td><input type="text" class="input" id="hName" placeholder="발신자명" required size="30"></td>
+      </tr>
+      <tr>
+        <td class="title_color">subject</td>
+        <td><input type="text" class="input" id="hSubj" placeholder="제목" required size="30" /></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <textarea style="display:none;" id="mlist"></textarea>
+          <div class="upload_type" id="upload_button">upload(click me)</div>
+        </td>
+      <tr>
+        <td colspan="2">
+          <div class="result" id="mtotal" align="center"></div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <input class="send" disabled="true" type="button" id="btnOK" value="Send">
+        </td>
+      </tr>
+    </table>
+    <div class="help">
+      From : 이메일주소<br />
+      Name : 보낸사람이름<br />
+      subj : 제목<br />
+      mail contents : 내용<br />
+      <br />
+      <!--time : 메일발송시간간격<br />
+      (2~3초가 이상적인 메일 발송 간격)<br />
+      <br /> -->
+      업로드할 파일은 txt 파일만 가능.<br />
+      (라인단위의 메일주소목록)<br />
+      <br />
+      메일발송후 실패한 목록에서<br />
+      메일주소를 클릭하면<br />
+      목록에서 제외되고<br />
+      '재발송'버튼을 클릭하면 다시 발송
+    </div>
+  </aside>
+
+  <section class="section">
+    <table id="tblForm">
+      <tr>
+        <td>
+          <textarea id="hCont" valign="top" placeholder="메일본문" required></textarea>
+        </td>
+      </tr>
+    </table>
+    <table class="ok"id="tblResult">
+      <tr>
+        <td> OK </td>
+        <td>FAIL</td>
+      </tr>
+      <tr>
+        <td>
+          <ul id="listO"></ul>
+        </td>
+        <td valign="top">
+          <ul id="listX"></ul>
+        </td>
+      </tr>
+    </table>
+    </td>
+    </tr>
+    </table>
+
+  </section>
+
+</body>
+
+</html>
